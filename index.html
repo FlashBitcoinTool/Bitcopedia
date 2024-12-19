@@ -46,50 +46,216 @@
         }
     </script>
     <style>
+        :root {
+            --bitcoin-orange: #f7931a;
+            --bitcoin-blue: #0d3c61;
+            --text-color: #333;
+            --background-color: #f8f9fa;
+            --link-color: #1a73e8;
+            --link-hover-color: #174ea6;
+            --card-background: #ffffff;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition-speed: 0.3s;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
+            color: var(--text-color);
+            background-color: var(--background-color);
         }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
+
+        .header {
+            background-color: var(--bitcoin-orange);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        header .logo img {
-            width: 200px;
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
+
+        .logo img {
+            max-width: 200px;
+            height: auto;
+            transition: transform var(--transition-speed);
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
         .search-bar input {
-            padding: 10px;
+            padding: 0.5rem;
             border-radius: 4px;
-            width: 80%;
-            border: 1px solid #ccc;
-        }
-        .search-bar button {
-            background-color: #ff9900;
-            color: white;
             border: none;
-            padding: 10px;
+            width: 100%;
+        }
+
+        .search-bar button {
+            padding: 0.5rem;
+            background-color: var(--bitcoin-blue);
+            color: white;
             border-radius: 4px;
             cursor: pointer;
+            border: none;
+            transition: background-color var(--transition-speed);
         }
+
+        .search-bar button:hover {
+            background-color: var(--bitcoin-orange);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-speed);
+        }
+
+        .nav-links a:hover {
+            color: var(--link-hover-color);
+        }
+
+        .main-content {
+            display: flex;
+            margin-top: 2rem;
+        }
+
+        .table-of-contents {
+            width: 250px;
+            margin-right: 2rem;
+            background-color: var(--card-background);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .main-article {
+            flex: 1;
+            background-color: var(--card-background);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+        }
+
+        h1, h2, h3 {
+            color: var(--bitcoin-orange);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--bitcoin-orange);
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 1px solid var(--bitcoin-orange);
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--link-hover-color);
+        }
+
         .footer {
-            background-color: #333;
+            background-color: var(--bitcoin-blue);
             color: white;
             padding: 40px 0;
+            text-align: center;
         }
-        .footer a {
-            color: #ff9900;
-        }
+
         .footer-links ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
+            margin-bottom: 20px;
         }
+
         .footer-links li {
             margin: 10px 0;
         }
-        .interactive-element {
+
+        .footer-links a {
+            color: var(--bitcoin-orange);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-links a:hover {
+            color: var(--bitcoin-orange);
+        }
+
+        .donation {
+            background-color: var(--bitcoin-blue);
+            padding: 10px;
             margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .donation a {
+            color: var(--bitcoin-orange);
+        }
+
+        .btn-donate {
+            background-color: var(--bitcoin-orange);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color var(--transition-speed);
+        }
+
+        .btn-donate:hover {
+            background-color: var(--bitcoin-blue);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .search-bar {
+                width: 100%;
+                margin-top: 1rem;
+            }
         }
     </style>
 </head>
@@ -108,118 +274,64 @@
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
-                <ul class="nav-links d-flex">
-                    <li><a href="#history">History</a></li>
-                    <li><a href="#technology">Technology</a></li>
-                    <li><a href="#economics">Economics</a></li>
-                    <li><a href="#impact">Global Impact</a></li>
-                    <li><a href="#contribute">Contribute</a></li>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <button class="mobile-menu-toggle d-block d-md-none" aria-label="Toggle mobile menu">
-                    <span></span><span></span><span></span>
-                </button>
             </nav>
         </div>
     </header>
 
-    <main class="main-content">
-        <div class="container">
-            <aside class="table-of-contents d-none d-md-block">
-                <h2>Contents</h2>
-                <ol id="toc-list"></ol>
-            </aside>
-
-            <article class="main-article">
-                <h1>Bitcoin</h1>
-                <section id="introduction">
-                    <p><strong>Bitcoin</strong> is a decentralized digital currency created in 2009 that uses peer-to-peer technology to facilitate instant payments. It follows the ideas set out in a whitepaper by the mysterious Satoshi Nakamoto, whose true identity remains unverified.</p>
-                    <div class="interactive-element">
-                        <h3>Current Bitcoin Price</h3>
-                        <p id="bitcoin-price">Loading...</p>
-                        <canvas id="bitcoin-price-chart"></canvas>
-                    </div>
-                </section>
-
-                <section id="history">
-                    <h2>History</h2>
-                    <p>Bitcoin's inception traces back to 2008 when a whitepaper titled "Bitcoin: A Peer-to-Peer Electronic Cash System" was published under the pseudonym Satoshi Nakamoto. The first Bitcoin transaction occurred in 2009, marking the beginning of a new era in digital finance.</p>
-                </section>
-
-                <section id="technology">
-                    <h2>Technology</h2>
-                    <h3>Blockchain</h3>
-                    <p>The blockchain is a public, distributed ledger that records all Bitcoin transactions. It's structured as a chain of blocks, each containing a group of transactions and a hash of the previous block, ensuring the integrity and immutability of the entire chain.</p>
-                </section>
-
-                <section id="economics">
-                    <h2>Economics</h2>
-                    <p>Bitcoin operates as a decentralized digital asset, designed to function as a medium of exchange. Its unique economic properties, including a capped supply of 21 million coins, have led some to view it as "digital gold" and a potential hedge against inflation.</p>
-                </section>
-
-                <section id="impact">
-                    <h2>Global Impact</h2>
-                    <p>Bitcoin has had a profound impact on the global financial landscape, challenging traditional banking systems and sparking debates about the future of money. Its adoption varies widely across different countries, with some embracing it and others imposing restrictions.</p>
-                </section>
-
-                <section id="see-also">
-                    <h2>See Also</h2>
-                    <ul>
-                        <li><a href="#">Cryptocurrency</a></li>
-                        <li><a href="#">Blockchain Technology</a></li>
-                        <li><a href="#">Ethereum</a></li>
-                    </ul>
-                </section>
-
-                <section id="references">
-                    <h2>References</h2>
-                    <ol>
-                        <li><a href="#">Nakamoto, S. (2008). "Bitcoin: A Peer-to-Peer Electronic Cash System"</a></li>
-                    </ol>
-                </section>
-            </article>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2023 Bitcopedia. Content available under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise noted.</p>
-            <ul class="footer-links">
+    <div class="container main-content">
+        <div class="table-of-contents">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#what-is-bitcoin">What is Bitcoin?</a></li>
                 <li><a href="#history">History</a></li>
                 <li><a href="#technology">Technology</a></li>
                 <li><a href="#economics">Economics</a></li>
-                <li><a href="#impact">Global Impact</a></li>
+                <li><a href="#impact">Impact</a></li>
             </ul>
         </div>
+        <div class="main-article">
+            <h1 id="what-is-bitcoin">What is Bitcoin?</h1>
+            <p>Bitcoin is a decentralized digital currency...</p>
+
+            <h2 id="history">History of Bitcoin</h2>
+            <p>Bitcoin was created in 2008 by an unknown person or group...</p>
+
+            <h2 id="technology">Technology</h2>
+            <p>Bitcoin operates on blockchain technology...</p>
+
+            <h2 id="economics">Economics of Bitcoin</h2>
+            <p>The economics of Bitcoin are revolutionary...</p>
+
+            <h2 id="impact">Impact of Bitcoin</h2>
+            <p>Bitcoin has had a significant global impact...</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <a href="https://twitter.com/bitcopedia" aria-label="Follow on Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com/bitcopedia" aria-label="Follow on Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="donation">
+                <p>Support Bitcopedia with a donation:</p>
+                <a href="donate.html" class="btn-donate">Donate Bitcoin</a>
+            </div>
+        </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        // Fetching Bitcoin Price using API
-        async function fetchBitcoinPrice() {
-            const response = await fetch('https://api.coindesk.com/v1/bpi/currentprice/BTC.json');
-            const data = await response.json();
-            const price = data.bpi.USD.rate;
-            document.getElementById('bitcoin-price').textContent = `$${price}`;
-        }
-
-        fetchBitcoinPrice();
-
-        // Bitcoin Price Chart
-        const ctx = document.getElementById('bitcoin-price-chart').getContext('2d');
-        const chart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May'],
-                datasets: [{
-                    label: 'Bitcoin Price',
-                    data: [40000, 45000, 35000, 38000, 39000],
-                    borderColor: '#ff9900',
-                    fill: false,
-                    tension: 0.1
-                }]
-            }
-        });
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
