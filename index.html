@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitcoin - Bitcopedia: The Ultimate Bitcoin Encyclopedia</title>
     <meta name="description" content="Explore the revolutionary world of Bitcoin with Bitcopedia, the most comprehensive and up-to-date Bitcoin encyclopedia. Discover its history, technology, economics, and global impact.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap">
+    <link rel="icon" href="assets/images/favicon.png">
     <meta property="og:title" content="Bitcoin - Bitcopedia: The Ultimate Bitcoin Encyclopedia">
     <meta property="og:description" content="Explore the revolutionary world of Bitcoin with Bitcopedia, the most comprehensive and up-to-date Bitcoin encyclopedia. Discover its history, technology, economics, and global impact.">
     <meta property="og:image" content="https://flashbitcointool.github.io/Bitcopedia/assets/images/og-image.jpg">
@@ -21,59 +19,104 @@
     <meta name="twitter:description" content="Explore the revolutionary world of Bitcoin with Bitcopedia, the most comprehensive and up-to-date Bitcoin encyclopedia. Discover its history, technology, economics, and global impact.">
     <meta name="twitter:image" content="https://flashbitcointool.github.io/Bitcopedia/assets/images/twitter-card-image.jpg">
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://flashbitcointool.github.io/Bitcopedia/"
-      },
-      "headline": "Bitcoin: The Revolutionary Digital Currency",
-      "description": "Explore the revolutionary world of Bitcoin with Bitcopedia, the most comprehensive and up-to-date Bitcoin encyclopedia. Discover its history, technology, economics, and global impact.",
-      "image": "https://flashbitcointool.github.io/Bitcopedia/assets/images/bitcoin-hero.jpg",
-      "author": {
-        "@type": "Organization",
-        "name": "Bitcopedia"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Bitcopedia",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://flashbitcointool.github.io/Bitcopedia/assets/images/bitcopedia-logo.svg"
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://flashbitcointool.github.io/Bitcopedia/"
+            },
+            "headline": "Bitcoin: The Revolutionary Digital Currency",
+            "description": "Explore the revolutionary world of Bitcoin with Bitcopedia, the most comprehensive and up-to-date Bitcoin encyclopedia. Discover its history, technology, economics, and global impact.",
+            "image": "https://flashbitcointool.github.io/Bitcopedia/assets/images/bitcoin-hero.jpg",
+            "author": {
+                "@type": "Organization",
+                "name": "Bitcopedia"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Bitcopedia",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://flashbitcointool.github.io/Bitcopedia/assets/images/bitcopedia-logo.svg"
+                }
+            },
+            "datePublished": "2023-05-20",
+            "dateModified": "2023-05-20"
         }
-      },
-      "datePublished": "2023-05-20",
-      "dateModified": "2023-05-20"
-    }
     </script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        header .logo img {
+            width: 200px;
+        }
+        .search-bar input {
+            padding: 10px;
+            border-radius: 4px;
+            width: 80%;
+            border: 1px solid #ccc;
+        }
+        .search-bar button {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+        }
+        .footer a {
+            color: #ff9900;
+        }
+        .footer-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin: 10px 0;
+        }
+        .interactive-element {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <nav class="main-nav">
+            <nav class="main-nav d-flex justify-content-between align-items-center">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/images/bitcopedia-logo.svg" alt="Bitcopedia Logo" width="200" height="50">
+                        <img src="assets/images/bitcopedia-logo.svg" alt="Bitcopedia Logo">
                     </a>
                 </div>
                 <div class="search-bar">
                     <input type="search" id="search-input" placeholder="Search Bitcopedia" aria-label="Search Bitcopedia">
                     <button type="submit" aria-label="Submit search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <i class="fas fa-search"></i>
                     </button>
                 </div>
-                <ul class="nav-links">
+                <ul class="nav-links d-flex">
                     <li><a href="#history">History</a></li>
                     <li><a href="#technology">Technology</a></li>
                     <li><a href="#economics">Economics</a></li>
                     <li><a href="#impact">Global Impact</a></li>
                     <li><a href="#contribute">Contribute</a></li>
                 </ul>
-                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="mobile-menu-toggle d-block d-md-none" aria-label="Toggle mobile menu">
+                    <span></span><span></span><span></span>
                 </button>
             </nav>
         </div>
@@ -81,19 +124,16 @@
 
     <main class="main-content">
         <div class="container">
-            <aside class="table-of-contents">
+            <aside class="table-of-contents d-none d-md-block">
                 <h2>Contents</h2>
-                <ol id="toc-list">
-                    <!-- Table of contents will be dynamically generated here -->
-                </ol>
+                <ol id="toc-list"></ol>
             </aside>
 
             <article class="main-article">
                 <h1>Bitcoin</h1>
-                
                 <section id="introduction">
                     <p><strong>Bitcoin</strong> is a decentralized digital currency created in 2009 that uses peer-to-peer technology to facilitate instant payments. It follows the ideas set out in a whitepaper by the mysterious Satoshi Nakamoto, whose true identity remains unverified.</p>
-                    <div class="interactive-element bitcoin-price-widget">
+                    <div class="interactive-element">
                         <h3>Current Bitcoin Price</h3>
                         <p id="bitcoin-price">Loading...</p>
                         <canvas id="bitcoin-price-chart"></canvas>
@@ -103,70 +143,22 @@
                 <section id="history">
                     <h2>History</h2>
                     <p>Bitcoin's inception traces back to 2008 when a whitepaper titled "Bitcoin: A Peer-to-Peer Electronic Cash System" was published under the pseudonym Satoshi Nakamoto. The first Bitcoin transaction occurred in 2009, marking the beginning of a new era in digital finance.</p>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h4>2008</h4>
-                            <p>Bitcoin whitepaper published</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>2009</h4>
-                            <p>First Bitcoin transaction</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>2010</h4>
-                            <p>First real-world Bitcoin transaction (Pizza purchase)</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>2013</h4>
-                            <p>Bitcoin price surpasses $1,000</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>2017</h4>
-                            <p>Bitcoin reaches all-time high near $20,000</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>2021</h4>
-                            <p>El Salvador adopts Bitcoin as legal tender</p>
-                        </div>
-                    </div>
                 </section>
 
                 <section id="technology">
                     <h2>Technology</h2>
-                    <section id="blockchain">
-                        <h3>Blockchain</h3>
-                        <p>The blockchain is a public, distributed ledger that records all Bitcoin transactions. It's structured as a chain of blocks, each containing a group of transactions and a hash of the previous block, ensuring the integrity and immutability of the entire chain.</p>
-                        <div class="interactive-element blockchain-viz">
-                            <h4>Blockchain Visualization</h4>
-                            <div id="blockchain-viz"></div>
-                        </div>
-                    </section>
-                    <section id="mining">
-                        <h3>Mining</h3>
-                        <p>Bitcoin mining is the process of adding transaction records to the public ledger (blockchain) and introducing new bitcoins into the system. Miners use powerful computers to solve complex mathematical problems, securing the network and processing transactions.</p>
-                        <div class="interactive-element mining-difficulty">
-                            <h4>Mining Difficulty</h4>
-                            <div id="mining-difficulty-chart"></div>
-                        </div>
-                    </section>
+                    <h3>Blockchain</h3>
+                    <p>The blockchain is a public, distributed ledger that records all Bitcoin transactions. It's structured as a chain of blocks, each containing a group of transactions and a hash of the previous block, ensuring the integrity and immutability of the entire chain.</p>
                 </section>
 
                 <section id="economics">
                     <h2>Economics</h2>
                     <p>Bitcoin operates as a decentralized digital asset, designed to function as a medium of exchange. Its unique economic properties, including a capped supply of 21 million coins, have led some to view it as "digital gold" and a potential hedge against inflation.</p>
-                    <div class="interactive-element market-cap">
-                        <h4>Bitcoin Market Capitalization</h4>
-                        <div id="market-cap-chart"></div>
-                    </div>
                 </section>
 
                 <section id="impact">
                     <h2>Global Impact</h2>
                     <p>Bitcoin has had a profound impact on the global financial landscape, challenging traditional banking systems and sparking debates about the future of money. Its adoption varies widely across different countries, with some embracing it and others imposing restrictions.</p>
-                    <div class="interactive-element global-adoption">
-                        <h4>Global Bitcoin Adoption</h4>
-                        <div id="adoption-map"></div>
-                    </div>
                 </section>
 
                 <section id="see-also">
@@ -175,16 +167,13 @@
                         <li><a href="#">Cryptocurrency</a></li>
                         <li><a href="#">Blockchain Technology</a></li>
                         <li><a href="#">Ethereum</a></li>
-                        <li><a href="#">Decentralized Finance (DeFi)</a></li>
                     </ul>
                 </section>
 
                 <section id="references">
                     <h2>References</h2>
                     <ol>
-                        <li id="ref1">Nakamoto, S. (2008). "Bitcoin: A Peer-to-Peer Electronic Cash System"</li>
-                        <li id="ref2">Antonopoulos, A. M. (2014). "Mastering Bitcoin: Unlocking Digital Cryptocurrencies"</li>
-                        <li id="ref3">Tapscott, D., & Tapscott, A. (2016). "Blockchain Revolution: How the Technology Behind Bitcoin Is Changing Money, Business, and the World"</li>
+                        <li><a href="#">Nakamoto, S. (2008). "Bitcoin: A Peer-to-Peer Electronic Cash System"</a></li>
                     </ol>
                 </section>
             </article>
@@ -195,19 +184,43 @@
         <div class="container">
             <p>&copy; 2023 Bitcopedia. Content available under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise noted.</p>
             <ul class="footer-links">
-                <li><a href="about.html">About Bitcopedia</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Use</a></li>
-                <li><a href="#contribute">Contribute</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#economics">Economics</a></li>
+                <li><a href="#impact">Global Impact</a></li>
             </ul>
-            <div class="social-links">
-                <a href="https://twitter.com/bitcopedia" target="_blank" rel="noopener noreferrer">Twitter</a>
-                <a href="https://github.com/bitcopedia" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
-    <script src="js/interactive-elements.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Fetching Bitcoin Price using API
+        async function fetchBitcoinPrice() {
+            const response = await fetch('https://api.coindesk.com/v1/bpi/currentprice/BTC.json');
+            const data = await response.json();
+            const price = data.bpi.USD.rate;
+            document.getElementById('bitcoin-price').textContent = `$${price}`;
+        }
+
+        fetchBitcoinPrice();
+
+        // Bitcoin Price Chart
+        const ctx = document.getElementById('bitcoin-price-chart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May'],
+                datasets: [{
+                    label: 'Bitcoin Price',
+                    data: [40000, 45000, 35000, 38000, 39000],
+                    borderColor: '#ff9900',
+                    fill: false,
+                    tension: 0.1
+                }]
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
