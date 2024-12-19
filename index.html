@@ -3,35 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitcopedia - Your Ultimate Bitcoin Encyclopedia</title>
-    <meta name="description" content="Explore the world of Bitcoin with Bitcopedia, your comprehensive guide to cryptocurrency history, technology, and latest news.">
+    <title>Bitcoin - Bitcopedia, the free Bitcoin encyclopedia</title>
+    <meta name="description" content="Bitcoin is a decentralized digital currency, without a central bank or single administrator, that can be sent from user to user on the peer-to-peer bitcoin network without intermediaries.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Open Graph tags for better social media sharing -->
-    <meta property="og:title" content="Bitcopedia - Your Ultimate Bitcoin Encyclopedia">
-    <meta property="og:description" content="Explore the world of Bitcoin with Bitcopedia, your comprehensive guide to cryptocurrency history, technology, and latest news.">
+    <meta property="og:title" content="Bitcoin - Bitcopedia, the free Bitcoin encyclopedia">
+    <meta property="og:description" content="Bitcoin is a decentralized digital currency, without a central bank or single administrator, that can be sent from user to user on the peer-to-peer bitcoin network without intermediaries.">
     <meta property="og:image" content="https://flashbitcointool.github.io/Bitcopedia/assets/images/og-image.jpg">
     <meta property="og:url" content="https://flashbitcointool.github.io/Bitcopedia/">
     <meta property="og:type" content="website">
     <!-- Twitter Card tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bitcopedia - Your Ultimate Bitcoin Encyclopedia">
-    <meta name="twitter:description" content="Explore the world of Bitcoin with Bitcopedia, your comprehensive guide to cryptocurrency history, technology, and latest news.">
+    <meta name="twitter:title" content="Bitcoin - Bitcopedia, the free Bitcoin encyclopedia">
+    <meta name="twitter:description" content="Bitcoin is a decentralized digital currency, without a central bank or single administrator, that can be sent from user to user on the peer-to-peer bitcoin network without intermediaries.">
     <meta name="twitter:image" content="https://flashbitcointool.github.io/Bitcopedia/assets/images/twitter-card-image.jpg">
     <!-- Structured data for rich snippets -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Bitcopedia",
-      "url": "https://flashbitcointool.github.io/Bitcopedia/",
-      "description": "Your comprehensive guide to Bitcoin history, technology, and latest news.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://flashbitcointool.github.io/Bitcopedia/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://flashbitcointool.github.io/Bitcopedia/"
+      },
+      "headline": "Bitcoin",
+      "description": "Bitcoin is a decentralized digital currency, without a central bank or single administrator, that can be sent from user to user on the peer-to-peer bitcoin network without intermediaries.",
+      "image": "https://flashbitcointool.github.io/Bitcopedia/assets/images/bitcoin-hero.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "Bitcopedia"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Bitcopedia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://flashbitcointool.github.io/Bitcopedia/assets/images/bitcopedia-logo.svg"
+        }
+      },
+      "datePublished": "2023-05-20",
+      "dateModified": "2023-05-20"
     }
     </script>
 </head>
@@ -43,11 +59,17 @@
                     <img src="assets/images/bitcopedia-logo.svg" alt="Bitcopedia Logo" width="200" height="50">
                 </a>
             </div>
+            <div class="search-bar">
+                <input type="search" placeholder="Search Bitcopedia" aria-label="Search Bitcopedia">
+                <button type="submit" aria-label="Submit search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
             <ul class="nav-links">
                 <li><a href="#history">History</a></li>
                 <li><a href="#technology">Technology</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#resources">Resources</a></li>
+                <li><a href="#economics">Economics</a></li>
+                <li><a href="#legal">Legal Status</a></li>
             </ul>
             <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                 <span></span>
@@ -57,57 +79,89 @@
         </nav>
     </header>
 
-    <main>
-        <section id="hero">
-            <h1>Welcome to Bitcopedia</h1>
-            <p>Your ultimate guide to the world of Bitcoin</p>
-        </section>
+    <main class="container">
+        <aside class="table-of-contents">
+            <h2>Contents</h2>
+            <ol>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#technology">Technology</a>
+                    <ol>
+                        <li><a href="#blockchain">Blockchain</a></li>
+                        <li><a href="#mining">Mining</a></li>
+                    </ol>
+                </li>
+                <li><a href="#economics">Economics</a></li>
+                <li><a href="#legal">Legal Status</a></li>
+                <li><a href="#see-also">See Also</a></li>
+                <li><a href="#references">References</a></li>
+            </ol>
+        </aside>
 
-        <section id="history">
-            <h2>Bitcoin History</h2>
-            <article>
-                <h3>The Genesis of Bitcoin</h3>
-                <p>Bitcoin was created in 2009 by an unknown person or group using the pseudonym Satoshi Nakamoto...</p>
-            </article>
-            <!-- Add more history articles -->
-        </section>
+        <article>
+            <h1>Bitcoin</h1>
+            
+            <section id="introduction">
+                <p><strong>Bitcoin</strong> is a decentralized digital currency, without a central bank or single administrator, that can be sent from user to user on the peer-to-peer bitcoin network without intermediaries. Transactions are verified by network nodes through cryptography and recorded in a public distributed ledger called a blockchain.</p>
+            </section>
 
-        <section id="technology">
-            <h2>Bitcoin Technology</h2>
-            <article>
-                <h3>Blockchain Explained</h3>
-                <p>The blockchain is a distributed ledger technology that underpins Bitcoin...</p>
-            </article>
-            <!-- Add more technology articles -->
-        </section>
+            <section id="history">
+                <h2>History</h2>
+                <p>Bitcoin was invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto. The currency began use in 2009 when its implementation was released as open-source software.</p>
+            </section>
 
-        <section id="news">
-            <h2>Latest Bitcoin News</h2>
-            <div id="news-feed">
-                <!-- News articles will be dynamically loaded here -->
-            </div>
-        </section>
+            <section id="technology">
+                <h2>Technology</h2>
+                <section id="blockchain">
+                    <h3>Blockchain</h3>
+                    <p>The blockchain is a public ledger that records bitcoin transactions. It is implemented as a chain of blocks, each block containing a hash of the previous block up to the genesis block of the chain.</p>
+                </section>
+                <section id="mining">
+                    <h3>Mining</h3>
+                    <p>Mining is the process of adding transaction records to Bitcoin's public ledger of past transactions. This ledger of past transactions is called the blockchain as it is a chain of blocks.</p>
+                </section>
+            </section>
 
-        <section id="resources">
-            <h2>Educational Resources</h2>
-            <ul>
-                <li><a href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="noopener noreferrer">Bitcoin Whitepaper</a></li>
-                <li><a href="https://github.com/bitcoin/bitcoin" target="_blank" rel="noopener noreferrer">Bitcoin Core GitHub</a></li>
-                <!-- Add more resources -->
-            </ul>
-        </section>
+            <section id="economics">
+                <h2>Economics</h2>
+                <p>Bitcoin is a digital asset designed to work as a medium of exchange that uses strong cryptography to secure financial transactions, control the creation of additional units, and verify the transfer of assets.</p>
+            </section>
+
+            <section id="legal">
+                <h2>Legal Status</h2>
+                <p>The legal status of bitcoin varies substantially from country to country and is still undefined or changing in many of them. While some countries have explicitly allowed its use and trade, others have banned or restricted it.</p>
+            </section>
+
+            <section id="see-also">
+                <h2>See Also</h2>
+                <ul>
+                    <li><a href="#">Cryptocurrency</a></li>
+                    <li><a href="#">Blockchain</a></li>
+                    <li><a href="#">Ethereum</a></li>
+                </ul>
+            </section>
+
+            <section id="references">
+                <h2>References</h2>
+                <ol>
+                    <li id="ref1">Nakamoto, S. (2008). "Bitcoin: A Peer-to-Peer Electronic Cash System"</li>
+                    <li id="ref2">Antonopoulos, A. M. (2014). "Mastering Bitcoin: Unlocking Digital Cryptocurrencies"</li>
+                </ol>
+            </section>
+        </article>
     </main>
 
     <footer>
-        <p>&copy; 2023 Bitcopedia. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-        </ul>
+        <div class="container">
+            <p>&copy; 2023 Bitcopedia. The content is available under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise noted.</p>
+            <ul class="footer-links">
+                <li><a href="about.html">About Bitcopedia</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+            </ul>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/news-feed.js"></script>
 </body>
 </html>
